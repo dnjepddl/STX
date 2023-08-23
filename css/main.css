@@ -49,6 +49,155 @@ body {
   position: relative;
   display: block;
 }
+/* 안내창 */
+body.active {
+  overflow-y: auto;
+}
+.modal-wrap {
+  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
+    "Apple SD Gothic Neo", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  text-align: center;
+}
+.modal-logo img {
+  border-radius: 50%;
+  width: 100px;
+  position: relative;
+  border: 5px solid white;
+  top: -50px;
+}
+.modal-main {
+  background-color: #fff;
+  width: 600px;
+  height: 450px;
+  border-radius: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-notice {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+}
+.modal-notice strong {
+  color: #e31a5a;
+  background: linear-gradient(to top, #ffe400 50%, transparent 50%);
+}
+.modal-notice span {
+  display: block;
+  font-size: 15px;
+  color: rgb(155, 154, 154);
+}
+.modal-close {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 50px;
+  position: relative;
+  top: 70px;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(247, 247, 241);
+  border-radius: 0 0 30px 30px;
+  cursor: pointer;
+}
+.modal-close i {
+  font-size: 15px;
+  font-weight: 300;
+}
+/* 탑 버트 */
+.top-button {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+.top-button .chat_btn {
+  -webkit-animation: updown 2s infinite ease-in-out;
+  animation: updown 2s infinite ease-in-out;
+}
+.top-button .chat_btn span {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+  display: none;
+  width: 160px;
+  background: #fff;
+  border-radius: 23px;
+  box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  text-align: center;
+  line-height: 45px;
+}
+.top-button .chat_btn:hover span {
+  display: block;
+}
+.top-button .shop-btn {
+  position: relative;
+  display: block;
+  width: 55px;
+  line-height: 55px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
+    inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+  letter-spacing: 0.5px;
+}
+.top-button .top-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background: #000;
+  border-radius: 50%;
+}
+.top-button .top-btn img {
+  transform: rotate(180deg);
+}
+.top-button .top-btn img.up {
+  transform: rotate(0deg);
+}
+
+@-webkit-keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /* 헤더 */
 .header {
   display: block;
